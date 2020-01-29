@@ -43,7 +43,7 @@ router.post("/login", validBody, (req, res) => {
 });
 
 router.get("/users", restricted, (req, res) => {
-  Users.fetchUsers()
+  Users.fetchUsers(req.user.department)
     .then(result => {
       res.status(200).json(result);
     })

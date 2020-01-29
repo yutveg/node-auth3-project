@@ -23,7 +23,8 @@ function restricted(req, res, next) {
       if (err) {
         res.status(401).json({ error: "Not authorized" });
       } else {
-        req.user = { department: decodedToken.department };
+        req.user = decodedToken.user;
+        console.log(req.user.department);
         next();
       }
     });

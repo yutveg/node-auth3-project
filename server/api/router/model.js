@@ -14,6 +14,8 @@ function findUser(credentials) {
   return db("users").where(credentials);
 }
 
-function fetchUsers() {
-  return db("users").select("username", "department");
+function fetchUsers(filter) {
+  return db("users")
+    .select("username", "department")
+    .where("department", filter);
 }
