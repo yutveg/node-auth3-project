@@ -11,9 +11,7 @@ function register(credentials) {
 }
 
 function findUser(credentials) {
-  return db("users")
-    .select("*")
-    .where({ credentials });
+  return db("users").where(credentials);
 }
 
 function fetchUsers() {
