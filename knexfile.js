@@ -16,6 +16,16 @@ module.exports = {
       directory: "./server/api/migrations"
     }
   },
+  testing: {
+    client: "sqlite3",
+    connectoin: {
+      filename: "./server/test.db3"
+    },
+    useNullAsDefault: true,
+    migrations: {
+      directory: "./server/api/migrations"
+    }
+  },
 
   staging: {
     client: "postgresql",
