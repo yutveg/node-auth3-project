@@ -24,5 +24,5 @@ function fetchUsers(filter) {
 function remove(id) {
   return db("users")
     .del()
-    .where({ id });
+    .where("id", id);
 }
